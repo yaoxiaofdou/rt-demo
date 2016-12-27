@@ -1,0 +1,116 @@
+/*
+ *
+ *     xiaofeng.yao     2016.8.9     select
+ *
+ */
+@import 'style';
+
+@select-width:120px;
+@select-height:20px;
+@select-background:#03a9f4;
+@select-color:#fff;
+@select-border:1px solid #03a9f4;
+@select-border-radius:5px;
+
+
+.select-div{
+    width:@select-width;
+    height:auto;
+    .position(absolute,none,none,none,none);
+    .select-select{
+        width:@select-width;
+        height:@select-height;
+        border:@select-border;
+        border-radius:@select-border-radius;
+        background:@select-background;
+        color:@select-color;
+        cursor:pointer;
+        text-align:center;
+        line-height:@select-height;
+        .position(absolute,0,none,none,none);
+        z-index:2;
+    }
+    ul{
+        width:@select-width;
+        height:auto;
+        .position(relative,0,none,none,none);
+        z-index:1;
+        li{
+            width:100%;
+            height:0;
+            text-align:center;
+            cursor:pointer;
+            line-height:@select-height;
+            transform:rotateX(0deg);
+            &:hover{
+                background: #03a9f4;
+                color:#fff;
+            }
+        }
+    }
+}
+.select-div-two{
+    width:@select-width;
+    height:auto;
+    .position(absolute,none,none,none,200px);
+    .select-select-two{
+        width:@select-width;
+        height:@select-height;
+        border:@select-border;
+        border-radius:@select-border-radius;
+        background:@select-background;
+        color:@select-color;
+        cursor:pointer;
+        text-align:center;
+        line-height:@select-height;
+        .position(absolute,0,none,none,none);
+        z-index:2;
+    }
+    ul{
+        width:100%;
+        height:auto;
+        display:block;
+        transition:0.7s;
+        transform:rotateX(90deg);
+        .position(absolute,22px,none,none,none);
+        z-index:3;
+        li{
+            width:100%;
+            height:20px;
+            text-align:center;
+            cursor:pointer;
+            transition:0.3s;
+            line-height:@select-height;
+            &:hover{
+                border-bottom:1px solid #03a9f4;
+                font-size:14px;
+                letter-spacing:5px;
+                color:#03a9f4;
+            }
+        }
+    }
+}
+
+.SelectAnimation{
+    animation:selectTwo 1.6s ease;
+}
+
+@keyframes selectTwo{
+    0%{
+        left:0;
+        transform:rotateX(450deg);
+        transform-origin:50% 50%;
+    }
+    50%{
+        width:200px;
+        height:260px;
+        left:-40px;
+        transform:rotateX(180deg);
+        transform-origin:50% 50%;
+    }
+    100%{
+        left:0;
+        transform:rotateX(0deg);
+        transform-origin:50% 50%;
+    }
+}

@@ -1,0 +1,57 @@
+/*
+ *
+ *     xiaofeng.yao     2016.8.9     tab
+ *
+ */
+@import 'style';
+
+@tab-width:450px;
+@tab-height:200px;
+@tab-border:1px solid #00bcd4;
+@tab-title-width:100px;
+@tab-title-height:30px;
+@tab-title-background:#04b3ca;
+@tab-title-color:#fff;
+@tab-item-background:#00bcd4;
+@tab-item-color:#fff;
+
+
+.Tab_Control_wrap{
+    width:@tab-width;
+    height:@tab-height;
+    outline:@tab-border;
+    .Tab_title_wrap{
+        width:@tab-width;
+        height:@tab-title-height;
+        .Tab_title{
+            width:@tab-title-width;
+            height:@tab-title-height;
+            text-align:center;
+            transition:0.7s;
+            color:@tab-title-background;
+            line-height:@tab-title-height;
+            display:inline-table;
+        }
+    }
+    .active{
+        width:(@tab-width)-(@tab-title-width)-(@tab-title-width) !important;
+        background:@tab-title-background;
+        color:@tab-title-color !important;
+    }
+    .Tab_item_wrap{
+        width:@tab-width;
+        height:(@tab-height)-(@tab-title-height);
+        .Tab_item{
+            width:@tab-width;
+            height:(@tab-height)-(@tab-title-height);
+            display:none;
+        }
+        .show{
+            background:@tab-item-background;
+            color:@tab-item-color;
+            text-align:center;
+            line-height:(@tab-height)-(@tab-title-height);
+            display:block;
+        }
+    }
+}

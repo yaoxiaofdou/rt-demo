@@ -1,0 +1,31 @@
+/*
+*
+*     xiaofeng.yao     2016.8.8     main nav
+*
+*/
+@import 'style';
+
+@nav-width:220px;
+@nav-height:100%;
+@nav-background:#eeeeee;
+@font-color:#999;
+
+.Assembly-MainNav{
+    width:@nav-width;
+    height:@nav-height;
+    color:@font-color;
+    background:@nav-background;
+    .position(absolute,0,none,0,0);
+    margin:auto;
+    z-index:2;
+    .Assembly-Title{
+        width:@nav-width;
+        height:(@nav-width)-50;
+        text-align:center;
+        h5{
+            color:#337ab7;
+            font-size:16px;
+            line-height:(@nav-width)-50;
+        }
+    }
+}

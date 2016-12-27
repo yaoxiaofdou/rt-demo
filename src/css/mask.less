@@ -1,0 +1,59 @@
+/*
+ *
+ *     xiaofeng.yao     2016.8.9     mask
+ *
+ */
+@import 'style';
+
+@mask-width:10000px;
+@mask-height:10000px;
+@mask-btn-width:auto;
+@mask-btn-height:auto;
+@mask-btn-padding:5px 8px;
+@mask-btn-border:none;
+@mask-btn-color:#fff;
+@mask-btn-cursor:pointer;
+@mask-btn-transition:0.7s;
+@mask-btn-margin:5px 10px;
+.Assembly-blackMask{
+    width:@mask-btn-width;
+    height:@mask-btn-height;
+    padding:@mask-btn-padding;
+    background: #000;
+    color:@mask-btn-color;
+    border:@mask-btn-border;
+    cursor:@mask-btn-cursor;
+    transition:@mask-btn-transition;
+    margin:@mask-btn-margin;
+    &:hover{
+        background: #999;
+    }
+}
+.Assembly-blueMask{
+    width:@mask-btn-width;
+    height:@mask-btn-height;
+    padding:@mask-btn-padding;
+    background: #03a9f4;
+    color:@mask-btn-color;
+    border:@mask-btn-border;
+    cursor:@mask-btn-cursor;
+    transition:@mask-btn-transition;
+    margin:@mask-btn-margin;
+    &:hover{
+        background: #0372a5;
+    }
+}
+.Mask-black-Background{
+    width:@mask-width;
+    height:@mask-height;
+    background:rgba(0,0,0, 0.3);
+    .position(absolute,0,0,0,0);
+    margin:auto;
+}
+.Mask-blue-Background{
+    width:@mask-width;
+    height:@mask-height;
+    background:rgba(3,169,244, 0.3);
+    .position(absolute,0,0,0,0);
+    margin:auto;
+}
